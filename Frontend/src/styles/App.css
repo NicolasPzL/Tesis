@@ -1,0 +1,151 @@
+/* src/styles/App.css */
+
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.app {
+  padding: 2rem 0;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.header h1 {
+  color: #2c3e50;
+  font-weight: 700;
+}
+.header p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+/* Cards */
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  border: none;
+  transition: transform 0.2s ease-in-out; /* Transición más sutil */
+}
+/* Quitar hover general de card si no se desea en todas */
+/* .card:hover {
+  transform: translateY(-5px);
+} */
+.card-title {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e9ecef; /* Borde más sutil */
+  padding-bottom: 0.75rem;
+  display: flex; /* Para alinear el badge */
+  align-items: center;
+}
+.card-title .badge { /* Estilo para el número */
+    font-size: 0.9em;
+}
+
+/* Upload Section */
+.upload-card {
+  background-color: #ffffff;
+  /* min-height: 250px; ya no es necesario con h-100 */
+}
+.file-upload-container { /* Asegura que ocupa altura si se usa flex */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.upload-btn {
+  background-color: #3498db;
+  border-color: #3498db;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  transition: background-color 0.2s ease;
+}
+.upload-btn:hover:not(:disabled) {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+/* Analysis Section */
+.analysis-card {
+  background-color: #ffffff;
+}
+.analyze-btn {
+  background-color: #2ecc71;
+  border-color: #27ae60;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  transition: background-color 0.2s ease;
+}
+.analyze-btn:hover:not(:disabled) {
+  background-color: #27ae60;
+  border-color: #27ae60;
+}
+.analyze-btn:disabled {
+  background-color: #bdc3c7; /* Gris más claro para deshabilitado */
+  border-color: #bdc3c7;
+  cursor: not-allowed;
+}
+.column-selector-wrapper { /* Estilo para el contenedor de checkboxes */
+    border: 1px solid #dee2e6;
+    padding: 1rem;
+    border-radius: .25rem;
+    background-color: #fff;
+    max-height: 300px; /* Altura máxima con scroll */
+    overflow-y: auto; /* Scroll vertical */
+}
+.column-selector .form-check-label { /* Hacer texto de checkbox más pequeño */
+    font-size: 0.9rem;
+}
+
+
+/* Results Section */
+.results-card {
+  background-color: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+  border-radius: 10px;
+}
+.results-summary {
+    font-size: 0.95rem;
+}
+.plots-container h5, .anomaly-records h6 { /* Títulos de secciones resultados */
+  color: #34495e;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ecf0f1;
+}
+.plots-container img { /* Estilo para las imágenes de gráficos */
+    border: 1px solid #ddd;
+    padding: 2px;
+}
+
+/* Tabla de resultados */
+.table-responsive {
+  max-height: 450px; /* Aumentar altura scroll tabla */
+  overflow-y: auto;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+}
+.table th { /* Estilo encabezados tabla */
+    background-color: #f8f9fa;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap; /* Evitar que títulos largos se partan */
+}
+.table td { /* Estilo celdas tabla */
+    font-size: 0.85rem;
+    vertical-align: middle;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .plots-container .col-md-6 { /* Apilar gráficos en móvil */
+      width: 100%;
+  }
+}
