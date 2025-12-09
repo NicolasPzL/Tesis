@@ -22,7 +22,7 @@ El objetivo principal es pasar de sistemas de seguridad reactivos a un modelo **
 
 ## 🛠️ Tecnologías Utilizadas
 
-* **Backend:** Python (Flask/Django)
+* **Backend:** Python (Flask)
 * **Frontend:** React.js, HTML5, CSS3, Node.js
 * **Ciencia de Datos:** Scikit-Learn, Pandas, NumPy
 * **Base de Datos:** SQL / NoSQL
